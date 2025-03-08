@@ -1,0 +1,52 @@
+# UI settings
+"ui.menu" = { fg = "#e4e4e7", bg = "#27272a" }
+"ui.menu.selected" = { fg = "#18181b", bg = "#a78bfa" }
+"ui.linenr" = { fg = "#e4e4e7", bg = "#18181b" }
+"ui.popup" = { fg = "#e4e4e7", bg = "#27272a" }
+"ui.linenr.selected" = { fg = "#e4e4e7", bg = "#18181b", modifiers = ["bold"] }
+"ui.selection" = { fg = "#e4e4e7", bg = "#4b5563" }
+"ui.text.inactive" = { fg = "#71717a" }
+"ui.statusline" = { fg = "#e4e4e7", bg = "#27272a" }
+"ui.statusline.inactive" = { fg = "#71717a", bg = "#27272a" }
+"ui.statusline.normal" = { fg = "#18181b", bg = "#a78bfa" }
+"ui.statusline.insert" = { fg = "#18181b", bg = "#34d399" }
+"ui.statusline.select" = { fg = "#18181b", bg = "#60a5fa" }
+"ui.cursor" = { fg = "#a78bfa", bg = "#18181b" }
+"ui.cursor.primary" = { fg = "#a78bfa", bg = "#18181b", modifiers = ["reversed"] }
+"ui.cursor.match" = { fg = "#fbbf24", modifiers = ["underlined"] }
+"ui.virtual.ruler" = { bg = "#27272a" }
+"ui.virtual" = { fg = "#71717a" }
+"ui.virtual.indent-guide" = { fg = "#27272a" }
+"ui.virtual.jump-label" = { fg = "#60a5fa", modifiers = ["bold"] }
+"ui.help" = { fg = "#e4e4e7", bg = "#18181b" }
+"ui.gutter" = { bg = "#18181b" }
+
+# Syntax highlighting
+"comment" = { fg = "#71717a", modifiers = ["italic"] }
+"constant" = { fg = "#22d3ee" }
+"constant.numeric" = { fg = "#fb7185" }
+"constant.character.escape" = { fg = "#fb7185" }
+"string" = { fg = "#fbbf24" }
+"variable" = { fg = "#e4e4e7" }
+"type" = { fg = "#34d399" }
+"function" = { fg = "#60a5fa" }
+"keyword" = { fg = "#a78bfa" }
+"operator" = { fg = "#a1a1aa" }
+"special" = { fg = "#60a5fa" }
+"namespace" = { fg = "#34d399" }
+
+# Markup
+"markup.heading" = { fg = "#60a5fa", modifiers = ["bold"] }
+"markup.list" = { fg = "#fb7185" }
+"markup.link.url" = { fg = "#fbbf24", modifiers = ["underlined"] }
+"markup.quote" = { fg = "#60a5fa" }
+
+# Diffs
+"diff.plus" = { fg = "#34d399" }
+"diff.minus" = { fg = "#fb7185" }
+
+# Diagnostics
+"error" = { fg = "#fb7185" }
+"warning" = { fg = "#fbbf24" }
+"info" = { fg = "#60a5fa" }
+"hint" = { fg = "#71717a" }
