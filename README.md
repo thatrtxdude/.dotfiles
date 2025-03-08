@@ -5,7 +5,7 @@ These are the dotfiles I use on my ThinkPad X270. The goal here was to create so
 The biggest difference from the main branch is that this uses Sway (specifically SwayFX) rather than Hyprland. Alacritty has also been replaced with foot.
 
 For actual dependencies, this branch requires the following packages:
-`swayfx rofi-wayland autotiling polkit-gnome copyq wbg grimshot waybar`
+`swayfx rofi-wayland autotiling polkit-gnome copyq wbg grimshot waybar helix`
 
 Nerd fonts are also a hard-requirement, as I use Blex Mono Nerd Font and JetBrainsMonoNL Nerd Font extensively.
 
