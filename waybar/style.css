@@ -1,11 +1,36 @@
-@import 'colors.css';
+@define-color background #18181b;             /* synapse-bg-0 - Zinc 900 */
+@define-color background-alt #27272a;         /* synapse-bg-1 - Zinc 800 */
+@define-color background-dim rgba(39, 39, 42, 0.95);  /* synapse-bg-1 with transparency - Zinc 800 with transparency */
+@define-color border #3f3f46;                 /* synapse-ui-border - Zinc 700 */
+@define-color text #e4e4e7;                    /* synapse-fg-0 - Zinc 200 */
+@define-color text-dim #a1a1aa;               /* synapse-fg-1 - Zinc 400 */
+@define-color text-dimmer #71717a;            /* synapse-fg-2 - Zinc 500 */
+@define-color accent #a78bfa;                 /* synapse-purple - Tailwind Purple 400 */
+@define-color accent-hover #60a5fa;           /* synapse-blue - Tailwind Blue 400 for hover, or could use brighter purple */
+@define-color accent-dim #52525b;             /* synapse-ui-subtle - Zinc 600 */
+
+/* Application-specific colors - Keeping as is, adjust if needed to fit Synapse better */
+@define-color firefox-bg #e6e6e6;                     /* lighter for visibility */
+@define-color firefox-text #4d4d4d;                   /* darker text for contrast */
+@define-color chromium-bg rgb(50, 95, 153);
+
+/* @import 'colors.css'; - No need to import external CSS in this context */
 
 * {
     border: none;
     font-family: "JetBrainsMonoNL Nerd Font";
-    font-size: 20px;
-    border-radius: 5px;
+    font-size: 16px;
+    border-radius: 10px;
     min-height: 24px;
+}
+
+#window {
+    margin-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: none;
+    color: @text;
+    background: @background;
 }
 
 window#waybar {
@@ -13,45 +38,35 @@ window#waybar {
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
+    opacity: 0;
 }
 
-#window {
-    margin-top: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    transition: none;
-    color: @text;
+/* Base styling for all modules */
+#workspaces,
+#network,
+#pulseaudio,
+#temperature,
+#cpu,
+#memory,
+#clock,
+#custom-weather,
+#custom-cava-internal,
+#custom-mediaplayer,
+#tray,
+#battery,
+#custom-power {
+    padding: 0 10px;
+    margin:  5px 10px;
     background: @background;
-}
-
-/* Application-specific styles */
-window#waybar.termite #window,
-window#waybar.Firefox #window,
-window#waybar.Navigator #window,
-window#waybar.PCSX2 #window {
-    color: @firefox-text;
-    background: @firefox-bg;
-}
-
-window#waybar.chromium {
+    border: 2px solid @border;
     color: @text;
-    background-color: @chromium-bg;
 }
 
-#workspaces {
-    margin-top: 8px;
-    margin-left: 12px;
-    margin-bottom: 0;
-    background: @background;
-    transition: none;
-}
-
+/* Workspace styling */
 #workspaces button {
     transition: none;
     color: @text-dim;
     background: transparent;
-    font-size: 16px;
 }
 
 #workspaces button.focused {
@@ -65,33 +80,37 @@ window#waybar.chromium {
     color: @accent-hover;
 }
 
-/* Common module styling */
-#network,
-#pulseaudio,
-#temperature,
-#cpu,
-#memory,
-#clock,
-#custom-cava-internal,
+/* Special module styling */
 #custom-mediaplayer {
-    margin-top: 8px;
-    margin-left: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    transition: none;
-    color: @text;
-    background: @background;
+    /* background: linear-gradient(0deg, @background-dim 0%, rgba(139, 92, 246, 0.2) 100%); */
+    min-width: 100px;
+    /* padding-left: 16px; */
 }
 
-/* Specific margin adjustments */
-#memory,
-#clock,
-#custom-cava-internal {
-    margin-right: 12px;
-}
-
-/* Custom module specific styles */
 #custom-cava-internal {
     font-family: "bargraph";
+    font-size: 12px;
+}
+
+
+#tray {
+    background: @background-dim;
+}
+
+@keyframes blink {
+    to {
+        color: @text;
+        background-color: #f38ba8; /* Keeping default blink color, consider synapse-rose if desired */
+    }
+}
+
+/* Tooltip styling */
+tooltip {
+    background: @background;
+    border: 1px solid @border;
+    border-radius: 6px;
+}
+
+tooltip label {
+    color: @text;
 }

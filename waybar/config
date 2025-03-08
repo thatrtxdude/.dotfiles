@@ -1,8 +1,8 @@
 {
 	"layer": "top",
-	"modules-left": ["hyprland/workspaces", "custom/mediaplayer", "custom/cava-internal"],
+	"modules-left": ["sway/workspaces", "custom/mediaplayer", "custom/cava-internal", "battery"],
 	"modules-center": ["clock"],
-	"modules-right": ["network", "pulseaudio", "temperature", "cpu", "memory"],
+	"modules-right": ["network", "pulseaudio", "temperature", "cpu", "memory", "custom/power"],
 
 	"custom/music": {
 		"exec": "playerctl metadata --format '{{ artist }} - {{ title }}'",
@@ -12,13 +12,32 @@
 		"tooltip": false
 	},
 
+	"battery": {
+        "interval": 15,
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format-charging": "CH:{capacity}%",
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": true
+    },
+	
 	"custom/mediaplayer": {
         "exec": "~/.config/waybar/scripts/mediaplayer.sh",
 		"on-click": "playerctl play-pause",
-        "interval": 1,
+        "interval": 3,
         "format": "{}",
         "tooltip": false
     },
+
+	"custom/power": {
+		"format": "󰤆",
+		"on-click": "~/.config/rofi/powermenu/type-4/powermenu.sh",
+		"tooltip": false
+	},
 
 	"pulseaudio": {
 		"tooltip": false,
@@ -27,29 +46,21 @@
 		"format-icons": {
 			"default": ["󰕿", "󰖀", "󰕾"]
 		},
-		"on-click": "pavucontrol"
+		"on-click": "foot -e ~/pwctl/src/pwctl.py"
 	},
 	"network": {
 		"tooltip": false,
-		"format-wifi": " {essid} {ipaddr}",
+		"format-wifi": " ",
 		"format-ethernet": "󰈀 {ifname}"
 	},
 	"cpu": {
 		"interval": 3,
 		"tooltip": false,
 		"format": " {avg_frequency}GHz",
-		"on-click": "alacritty -e btop"	
+		"on-click": "foot -e btop"	
 	},
 	"memory": {
 		"tooltip": false,
-		"format": " {}%"
+		"format": " {}%"
 	},
-	"custom/cava-internal": {
-    	"exec": "sh ~/.config/waybar/scripts/cava.sh",
-    	"format": "{}",
-    	"tooltip": false,
-    	"on-click": "swaymsg reload & pkill waybar & waybar",
-    	"layer": "below",
-    	"output": "all"
-  }
 }

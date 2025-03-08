@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 player_status=$(playerctl status 2> /dev/null)
 artist=$(playerctl metadata artist 2> /dev/null)
