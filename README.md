@@ -9,6 +9,9 @@ For actual dependencies, this branch requires the following packages:
 
 Nerd fonts are also a hard-requirement, as I use Blex Mono Nerd Font and JetBrainsMonoNL Nerd Font extensively.
 
+# Disclaimer
+Some scripts/applications that I use in these dotfiles were written by me, but these haven't been uploaded yet as I don't consider them quite done just yet. A noteable example for this would be the pwctl.py script that I use in my waybar config. For now, I encourage replacing this with something like pavucontrol (GUI) or pulsemixer (TUI).
+
 # Yazi
 My Yazi config requires additional plugins that aren't included in these dotfiles. Install them using:
 
