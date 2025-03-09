@@ -1,0 +1,137 @@
+/* shared/colors.rasi */
+/* Synapse Theme - Base Palette */
+
+/* Core Neutrals - Based on Tailwind Zinc with slight adjustments for neutrality */
+:root {
+  /* Base Neutrals */
+  --synapse-bg-0: #18181b;       /* Zinc 900 - Main background */
+  --synapse-bg-1: #27272a;       /* Zinc 800 - Secondary background */
+  --synapse-bg-2: #3f3f46;       /* Zinc 700 - Tertiary background */
+  --synapse-fg-0: #e4e4e7;       /* Zinc 200 - Primary text */
+  --synapse-fg-1: #a1a1aa;       /* Zinc 400 - Secondary text */
+  --synapse-fg-2: #71717a;       /* Zinc 500 - Tertiary text */
+
+  /* UI Elements */
+  --synapse-ui-subtle: #52525b;  /* Zinc 600 - Subtle UI elements */
+  --synapse-ui-border: #3f3f46;  /* Zinc 700 - Borders */
+  --synapse-ui-selection: #4b5563; /* Slightly blueish for selection */
+  --synapse-ui-highlight: #404040; /* Custom highlight */
+
+  /* Accent Colors - Balanced between warm and cool */
+  --synapse-cyan: #22d3ee;       /* Tailwind Cyan 400 - Cool accent */
+  --synapse-blue: #60a5fa;       /* Tailwind Blue 400 - Cool accent */
+  --synapse-purple: #a78bfa;     /* Tailwind Purple 400 - Neutral accent */
+  --synapse-amber: #fbbf24;      /* Tailwind Amber 400 - Warm accent */
+  --synapse-rose: #fb7185;       /* Tailwind Rose 400 - Warm accent */
+  --synapse-emerald: #34d399;    /* Tailwind Emerald 400 - Cool accent */
+
+  /* Syntax Highlighting */
+  --synapse-syntax-keyword: var(--synapse-purple);
+  --synapse-syntax-function: var(--synapse-blue);
+  --synapse-syntax-string: var(--synapse-amber);
+  --synapse-syntax-number: var(--synapse-rose);
+  --synapse-syntax-comment: var(--synapse-fg-2);
+  --synapse-syntax-type: var(--synapse-emerald);
+  --synapse-syntax-variable: var(--synapse-fg-0);
+  --synapse-syntax-constant: var(--synapse-cyan);
+  --synapse-syntax-operator: var(--synapse-fg-1);
+  --synapse-syntax-property: var(--synapse-fg-1);
+
+  /* Semantic UI Colors */
+  --synapse-info: var(--synapse-blue);
+  --synapse-success: var(--synapse-emerald);
+  --synapse-warning: var(--synapse-amber);
+  --synapse-error: var(--synapse-rose);
+}
+
+/* Synapse Dark - Default variation */
+.synapse-dark {
+  --glass-opacity: 0.75;
+  --glass-blur: 10px;
+  --glass-border: 1px solid rgba(63, 63, 70, 0.5);
+  --glass-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Synapse Deeper - Higher contrast variation */
+.synapse-deeper {
+  --synapse-bg-0: #09090b;       /* Darker main background */
+  --synapse-bg-1: #18181b;       /* Darker secondary background */
+  --synapse-bg-2: #27272a;       /* Darker tertiary background */
+  --synapse-fg-0: #fafafa;       /* Brighter text for higher contrast */
+
+  --synapse-cyan: #06b6d4;       /* Deeper cyan */
+  --synapse-blue: #3b82f6;       /* Deeper blue */
+  --synapse-purple: #8b5cf6;     /* Deeper purple */
+  --synapse-amber: #f59e0b;      /* Deeper amber */
+  --synapse-rose: #f43f5e;       /* Deeper rose */
+  --synapse-emerald: #10b981;    /* Deeper emerald */
+
+  --glass-opacity: 0.8;          /* Higher opacity for glass */
+  --glass-blur: 12px;            /* More intense blur */
+}
+
+/* Synapse Twilight - Slightly warmer variation */
+.synapse-twilight {
+  --synapse-bg-0: #1c1917;       /* Stone 900 - Warmer background */
+  --synapse-bg-1: #292524;       /* Stone 800 */
+  --synapse-bg-2: #44403c;       /* Stone 700 */
+  --synapse-fg-0: #e7e5e4;       /* Stone 200 */
+  --synapse-fg-1: #a8a29e;       /* Stone 400 */
+
+  --synapse-blue: #7dd3fc;       /* Lighter blue */
+  --synapse-purple: #c4b5fd;     /* Lighter purple */
+
+  --glass-opacity: 0.7;
+  --glass-border: 1px solid rgba(68, 64, 60, 0.5);
+}
+
+/* Synapse Frost - Slightly cooler variation */
+.synapse-frost {
+  --synapse-bg-0: #1e1e2e;       /* Slightly blue-shifted bg */
+  --synapse-bg-1: #2a2a3c;       /* Slightly blue-shifted secondary */
+  --synapse-bg-2: #40404f;       /* Slightly blue-shifted tertiary */
+  --synapse-fg-0: #e2e8f0;       /* Slightly cooler text */
+  --synapse-fg-1: #94a3b8;       /* Cooler secondary text */
+
+  --synapse-amber: #fcd34d;      /* Brighter amber for balance */
+  --synapse-rose: #fda4af;       /* Lighter rose */
+
+  --glass-opacity: 0.65;
+  --glass-blur: 15px;
+  --glass-border: 1px solid rgba(62, 62, 82, 0.5);
+}
+
+/* Synapse Light - Light mode variation */
+.synapse-light {
+  --synapse-bg-0: #f4f4f5;       /* Zinc 100 */
+  --synapse-bg-1: #e4e4e7;       /* Zinc 200 */
+  --synapse-bg-2: #d4d4d8;       /* Zinc 300 */
+  --synapse-fg-0: #18181b;       /* Zinc 900 */
+  --synapse-fg-1: #3f3f46;       /* Zinc 700 */
+  --synapse-fg-2: #52525b;       /* Zinc 600 */
+
+  --synapse-ui-subtle: #a1a1aa;  /* Zinc 400 */
+  --synapse-ui-border: #d4d4d8;  /* Zinc 300 */
+  --synapse-ui-selection: #cbd5e1; /* Slightly blueish for selection */
+
+  --synapse-cyan: #06b6d4;       /* Darker cyan for contrast */
+  --synapse-blue: #3b82f6;       /* Darker blue */
+  --synapse-purple: #8b5cf6;     /* Darker purple */
+  --synapse-amber: #f59e0b;      /* Darker amber */
+  --synapse-rose: #e11d48;       /* Darker rose */
+  --synapse-emerald: #10b981;    /* Darker emerald */
+
+  --glass-opacity: 0.5;
+  --glass-blur: 8px;
+  --glass-border: 1px solid rgba(228, 228, 231, 0.8);
+  --glass-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    selected:  @synapse-ui-selection;
+    foreground:  @synapse-fg-0;
+    background:  @synapse-bg-0;
+    background-alt: @synapse-bg-1;
+    urgent: @synapse-rose;
+    active: @synapse-cyan;
+}
